@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/port.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">ASHOK</a>
+        <div class='bx bx-menu' id="icons"></div>
+              <nav class="navbar">
+            <!-- Ensure these hrefs match your section IDs -->
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a> <!-- Corrected the ID here -->
+        </nav>
+    </header>
+    <section class="home" id="home">  
+<div class="home-content">  
+    <h1>I'm <span>Ashok Kumar</span></h1>
+        <div class="text-animate">
+    <h3>Full Stack Developer</h3>
+</div> 
+    
+
+        <div class="btn-box">
+            <a href="#" class="btn">Hire Me</a>
+            <a href="#" class="btn">Let's Talk</a>
+
+        </div>
+        <!-- <div class="home-img"></div> -->
+    
+    </section>
+</div>
+<section class="about" id="about">
+  
+    <h2 class="heading">About <span>Me</span></h2>
+    
+    <div class="about-img">
+   
+  <img src="{{ url_for('static', filename='img/boy.jpeg') }}">
+    <span class="circle-spin"></span>
+</div>
+<div class="about-con">
+    <h3>Developer!</h3>
+    <p>        Welcome to my web developer portfolio! <br>  a skilled and 
+        creative web developer with a passion for creating beautiful,<br>
+         responsive, and user-friendly websites. I've worked on a variety of
+         web projects,</p>
+         <div class="toto">
+        <div class="btn-box btns">
+            <a href="#" class="btn">Read More</a>
+
+        </div>
+    </div>
+        </div>
+
+
+
+</section>
+<section class="education" id="education">
+    <h2 class="heading">My <span>Journey</span></h2>
+    <div class="education-row">
+        <div class="education-cloumn">
+            <h3 class="tilte">Education</h3>
+            <div class="education-box">
+                <div class="education-content">
+                    <div class="content">
+                      <div class="year"><h3><i class='bx bx-calendar'></i>2021 - 2024</h3></div>  
+                        <h3>
+                            <p class="con">	MANONMANIAM SUNDARANAR UNIVERSITY <br>
+                                BSc Computer Science and Information technology <br>
+                                Percentage: 86%
+                                </p>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                      <div class="year"><h3><i class='bx bx-calendar'></i>2020 - 2021</h3></div>  
+                        <h3>
+                            <p class="con">	
+                                NADAR HIGHER SECONDARY SCHOOL, KOVILPATTI <br>
+                                12th Standard <br>
+                                Percentage: 79%
+                                
+                                </p>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                      <div class="year"><h3><i class='bx bx-calendar'></i>2018 - 2019</h3></div>  
+                        <h3>
+                            <p class="con">	NADAR HIGHER SECONDARY SCHOOL, KOVILPATTI <br>
+                                10th Standard <br>
+                                Percentage: 73%
+                                
+                                </p>
+                        </h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+   
+<section class="skills" id="skills">
+    <h2 class="heading"> My <span>Skills</span></h2>
+    <div class="skills-row">
+        <div class="skills-column">
+            <h3 class="title">Coding Skills</h3>
+
+            <div class="skills-box">
+                <div class="skills-content">
+                    <div class="progress">
+                        <h3>HTML <span>90%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>CSS <span>80%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>JavaScript <span>50%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>Python <span>70%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-column">
+            <h3 class="title">Professional Skills</h3>
+
+            <div class="skills-box">
+                <div class="skills-content">
+                    <div class="progress">
+                        <h3>Web Design <span>95%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>Web Developement <span>67%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>Video Editing<span>90%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>Photo Editing<span>50%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+    <form action="/" method="POST">
+        <div class="input-box">
+            <div class="input-field">
+                <input type="text" name="fmail" placeholder="your email" class="form-control" required>
+                <span class="focus"></span>
+            </div>
+            <div class="input-field">
+                <input type="password" name="fpwd" placeholder="your password" class="form-control" required>  <!-- Ensure name is set -->
+                <span class="focus"></span>
+            </div>
+            <div class="input-field">
+                <input type="text" name="tmail"  placeholder="To email" class="form-control" required>
+                <span class="focus"></span>
+            </div>
+            <div class="input-field">
+                <input type="text" name="subject" placeholder="Email Subject" required>  <!-- Ensure name is set -->
+                <span class="focus"></span>
+            </div>
+        </div>
+        <div class="textarea-field">
+            <textarea name="message" cols="30" rows="10" placeholder="Your message" required></textarea>  <!-- Ensure name is set -->
+            <span class="focus"></span>
+        </div>
+        <div class="btn-box btns">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </form>
+    
+
+</section>
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>Copyright &copy; 2024 by developer | All Rights Reserved</p>
+    </div>
+</div>
+
+    <div class="footer-iconTop">
+        <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+    
+</footer>
+<script src="{{ url_for('static', filename='js/port.js') }}"></script>
+</body>
+</html>
