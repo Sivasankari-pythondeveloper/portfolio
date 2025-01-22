@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="static/css/port.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight:weight;
+        font-style: normal;
+        text-decoration:none ;
+        scroll-behavior: smooth;
+        outline: none;
+        box-sizing: border-box;
+    }
+    :root{
+        --bg-color:#07111D;
+        --second-bg-color:#112e42;
+        --text-color:#E2E2D2;
+        --main-color:#00abf0;
+    }
+    
+    html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+    }
+    body{
+        background: var(--bg-color);
+        color: var(--text-color);
+    
+    }
+    
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem 9%;
+        background:transparent;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        z-index: 100;
+    }
+    .logo{
+        font-size: 2.5rem;
+        color:var(--text-color);
+        font-weight: 600;
+    }
+    .navbar a{
+        font-size: 1.7rem;
+        color: var(--text-color);
+        font-weight: 500;
+        margin-left: 3.5rem;
+        transition: .3s;
+    }
+    .navbar a:hover,
+    .navbar a.active{
+        color:var(--main-color);
+    }
+    #icons{
+        font-size: 3.6rem;
+        color: var(--text-color);
+        cursor: pointer;
+        display: none;
+    }
+    section{
+       min-height: 100vh;
+       padding: 10rem 9% 2rem;
+    
+    }
+    
+    /* .home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background: url('../img/boy.jpeg') no-repeat;
+    opacity: 5.5;
+    background-size: cover;
+    background-position: center;
+    } */
+    
+    
+    .home {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+        background: url('../img/boy.jpeg') no-repeat center center; 
+      
+        background-position: 50px;
+        background-size: cover;
+        position: relative; 
+      }
+      
+      .home::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Black overlay with 50% opacity */
+        z-index: 1; /* Ensure the overlay is above the background but below other content */
+      }
+      
+      .home > * {
+        position: relative;
+        z-index: 2; /* Ensure the content is above the overlay */
+      }
+      
+    
+    
+    
+    
+    .home-content{
+        
+        max-width: 500px; 
+    }
+    .home-content h1{
+    
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .home-content h3{
+        font-size: 32px;
+        font-weight: 700;
+        color: #e8f8ff;
+        position: relative;
+        top: 5px;
+    }
+    .home-content p{
+        font-size: 16px;
+        position: relative;
+        top: 25px;
+    }
+    .home-content .btn-box{
+        display: flex;
+        justify-content: space-between;
+        width: 345px;
+        height:50px;
+        
+    }
+    .btn-box .btn{
+        position: relative;
+        top: 50px;
+        display: inline-flex;
+        justify-content: center;
+        
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        background:var(--main-color);
+        border: .2rem solid var(--main-color);
+        border-radius: .8rem;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        color: var(--bg-color);
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .btn-box .btn:nth-child(2){
+        background: transparent;
+        color: var(--main-color);
+    }
+    
+    .btn-box .btn:nth-child(2):hover{
+        color: var(--bg-color);
+    }                                                                                                                                                  
+    
+    .btn-box .btn:nth-child(2)::before{
+        background: var(--main-color);
+    }
+    
+    .btn-box .btn:hover{
+        color: var(--main-color);
+    }
+    
+    
+    .btn-box .btn::before{
+    
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background:var(--bg-color);
+        z-index: -1;
+        transition: .5s;
+    
+    }
+    
+    .btn-box .btn:hover::before{
+        width: 100%;
+    }
+    
+    
+    .home-img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45%;
+        height: 100%;
+        background: transparent;
+        transition: 3s;
+    
+    }
+    
+    .home-img:hover{
+        background: var(--bg-color);
+        opacity: .8;
+    }
+    
+    .about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        background: var(--second-bg-color);
+        padding-bottom: 6rem;
+    }
+    .heading{
+        font-size: 5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    span{
+        color: var(--main-color);
+    }
+    .about-img{
+        position: relative;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-img img{ 
+        width: 90%;
+        border-radius: 50%;
+        border: .2rem solid var(--main-color);
+    }
+    
+    .about-img .circle-spin{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0);
+        width: 100%;
+        height: 100%;
+        border-radius: 70%;
+        border-top: .2rem solid var(--second-bg-color);
+        border-bottom: .2rem solid var(--second-bg-color);
+        border-left: .2rem solid var(--main-color);
+        border-right: .2rem solid var(--main-color);
+    }
+    
+    .about-con{
+        text-align: center;
+    }
+    
+    .about-con h3{
+        font-size: 2.6rem;
+    }
+    
+    .about-con p{
+        font-size: 1.6rem;
+        margin:2rem 0 3rem ;
+    }
+    
+    .btn-box .btns{
+      
+        display: inline-block;
+        width: 15rem;
+       
+        
+    }
+    
+    .btn-box .btns a::before{
+        background: var(--second-bg-color);
+    }
+    
+    .toto{
+        position: relative;
+        bottom: 50px;
+    
+    }
+    
+    .toto .btn{
+        height: 5rem;
+    }
+    
+    .education{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: auto;
+        padding-bottom: 5rem;
+    }
+    
+    .education .education-row{
+    
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    
+    .education-row .education-column{
+        flex: 1 1 40rem;
+    }
+    
+    .education-column .title {
+        font-size: 2.5rem;
+        margin: 0 0 1.5rem 2rem;
+    
+    
+    }
+    
+    .education-column .education-box {
+        border-left: 2rem solid var(--main-color);
+    }
+    
+    
+    .education-content .content {
+        position: relative;
+        padding: 1.5rem;
+        border: .2rem solid var(--main-color);
+        border-radius: .6rem;
+        margin-bottom: 2rem;
+    }
+    
+    
+    
+    .education-content .content .year{
+        font-size: 1rem;
+        color: var(--main-color);
+        padding-bottom: .5rem;
+    }
+    
+    .education-content .content .con{
+        padding: 1rem 0;
+         line-height: 1.8;
+    }
+    
+    .skills{
+        min-height: auto;
+        padding-bottom: 7rem;
+        background: var(--second-bg-color);
+    }
+    
+    .skills .skills-row{
+    
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    
+    .skills-row .skills-column{
+        flex: 1 1 40rem;
+    }
+    
+    
+    .skills-column .title{
+        font-size:2.5rem ;
+        margin: 0 0 1.5rem;
+    }
+    
+    .skills-box .skills-content{
+    
+        position: relative;
+        border: .2rem solid var(--main-color);
+        border-radius: .6rem;
+        padding: .5rem 1.5rem;
+        z-index: 1;
+        overflow: hidden;
+    }
+    
+    .skills-box .skills-content::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background:var(--bg-color);
+        z-index: -1;
+        transition: .5s;
+    }
+    
+    .skills-box .skills-content:hover::before{
+        width: 100%;
+    }
+    
+    .skills-content .progress{
+        padding: 1rem 0;
+    }
+    
+    .skills-content .progress h3{
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .skills-content .progress h3 span{
+    
+        color: var(--text-color);
+    }
+    
+    
+    .skills-content .progress .bar{
+    
+        height: 2.5rem;
+        border-radius: .6rem;
+        border: .2rem solid var(--main-color);
+        padding: .5rem;
+        margin: 1rem 0 0;
+    
+    }
+    
+    
+    .skills-content .progress .bar span{
+    
+        display: block;
+        height: 100%;
+        border-radius: .3rem;
+        background: var(--main-color);
+    }
+    
+    .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
+    
+        width: 90%;
+    }
+    
+    .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+    
+        width: 80%;
+    }
+    
+    .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
+    
+        width: 50%;
+    }
+    
+    .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+    
+        width: 70%;
+    }
+    
+    .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
+    
+        width: 95%;
+    }
+    
+    .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+    
+        width: 67%;
+    }
+    
+    .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span{
+    
+        width: 90%;
+    }
+    
+    .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
+    
+        width: 50%;
+    }
+    
+    .contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+    
+    }
+    
+    .contact form{
+    
+        max-width: 70rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .contact form .input-box{
+    
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .contact form .focus{
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background:var(--second-bg-color);
+        border-radius: .6rem;
+        z-index: -1;
+        transition: .5s;
+    }
+    .contact form .input-box .input-field input:focus~.focus,
+    .contact form .input-box .input-field input:valid~.focus,
+    .contact  form .textarea-field textarea:focus~.focus,
+    .contact  form .textarea-field textarea:valid~.focus{
+    
+        width: 100%;
+    }
+    
+    
+    
+    
+    .contact form .input-box .input-field{
+    
+        position: relative;
+        width: 49%;
+        margin: .8rem 0;
+    }
+    
+    .contact form .input-box .input-field input,
+    .contact form .textarea-field textarea {
+        width: 100%;
+        height: 100%;
+        padding: 1.5rem;
+        font-size:1.6rem;
+        color: var(--text-color);
+        background: transparent;
+        border-radius: .6rem;
+        border: .2rem solid var(--main-color);
+    }
+    
+    .contact form .input-box .input-field input::placeholder,
+    .contact form .textarea-field textarea::placeholder{
+        color: var(--text-color);
+    }
+    
+    .contact form .textarea-field{
+        position: relative;
+        margin: .8rem 0 2.7rem;
+        display: flex;
+    }
+    
+    .contact form .textarea-field textarea{
+    
+        resize: none;
+    }
+    
+    .contact form .btn-box.btns .btn{
+        cursor: pointer;
+    }
+    
+    .contact form .btn{
+        height: 5rem;
+    }
+    
+    .footer-text p{
+     font-size: 1.6rem;
+     position: relative;
+     left: 150px;
+     top: 20px;
+    }
+    
+    .footer-iconTop a {
+        position: relative;
+        left: 95%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: .8rem;
+        background: var(--main-color);
+        border: .2rem solid var(--main-color);
+        border-radius: .5rem;
+        bottom: 20px;
+    }
+    
+    .footer-iconTop a i{
+    
+        font-size: 2.4rem;
+    }
+    html {
+        scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+    }
+
+    .project {
+        padding: 6rem 9%;
+        background: var(--second-bg-color);
+    }
+    
+    .project .heading {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    
+    .project-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: center; /* Center the columns */
+    }
+    
+    .project-column {
+        flex: 1 1 45%; /* Set each project column to take up 45% of the row, and wrap as needed */
+        max-width: 45%; /* Limit width for responsive layout */
+        box-sizing: border-box;
+    }
+    
+    .project-box {
+        background: #1e2a37; /* A background color for the project box */
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .project-box:hover {
+        transform: translateY(-5px); /* Hover effect */
+    }
+    
+    .project-box h3 {
+        font-size: 2.5rem;
+        color: #E2E2D2;
+        margin-bottom: 1rem;
+    }
+    
+    .project-link span a {
+        font-size: 1.6rem;
+        color: var(--main-color);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .project-link span a:hover {
+        color: #e8f8ff;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .project-column {
+            flex: 1 1 100%; /* Stack the columns on smaller screens */
+            max-width: 100%;
+        }
+    }
+    
+</style>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo"></a>
+        <div class='bx bx-menu' id="icons"></div>
+        <nav class="navbar">
+            <!-- Ensure these hrefs match your section IDs -->
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Projects</a>
+            <a href="#contact">Contact</a>
+            
+        </nav>
+    </header>
+    
+    <section class="home" id="home">  
+        <div class="home-content">  
+            <h1>I'm <span>Sivasankari</span></h1>
+            <div class="text-animate">
+                <h3>Full Stack Developer</h3>
+            </div> 
+            <div class="btn-box">
+                <a href="#about" class="btn">About Me</a>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-img">
+            <img src="full.jpg" alt="Profile Image">
+            <span class="circle-spin"></span>
+        </div>
+        <div class="about-con">
+            <h3>Developer!</h3>
+            <p>Welcome to my web developer portfolio! A skilled and creative web developer with a passion for creating beautiful, responsive, and user-friendly websites. I've worked on a variety of web projects.</p>
+            <div class="toto">
+                <div class="btn-box btns">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading">My <span>Journey</span></h2>
+        <div class="education-row">
+            <div class="education-cloumn">
+                <h3 class="tilte">Education</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><h3><i class='bx bx-calendar'></i>2021 - 2024</h3></div>  
+                            <h3>
+                                <p class="con">MANONMANIAM SUNDARANAR UNIVERSITY <br>
+                                    BSc Computer Science and Information technology <br>
+                                    Percentage: 86%
+                                </p>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><h3><i class='bx bx-calendar'></i>2020 - 2021</h3></div>  
+                            <h3>
+                                <p class="con">KAMMAVAR HIGHER SECONDARY SCHOOL, KOVILPATTI <br>
+                                    12th Standard <br>
+                                    Percentage: 79%
+                                </p>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><h3><i class='bx bx-calendar'></i>2018 - 2019</h3></div>  
+                            <h3>
+                                <p class="con">KAMMAVAR HIGHER SECONDARY SCHOOL, KOVILPATTI <br>
+                                    10th Standard <br>
+                                    Percentage: 73%
+                                </p>
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading"> My <span>Skills</span></h2>
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Coding Skills</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>HTML <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>CSS <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>JavaScript <span>50%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Python <span>70%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h3 class="title">Professional Skills</h3>
+
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Web Design <span>95%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Web Development <span>67%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Video Editing <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Photo Editing <span>50%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="project" id="project">
+        <h2 class="heading">  <span>Projects</span></h2>
+        <div class="project-row">
+            <div class="project-column">
+                <div class="project-box">
+                    <h3>Library Management System</h3>
+                    <div class="project-link">
+                        <span><a href="https://drive.google.com/file/d/1rgpe4TQw_Tk8y_0XFdUaYtkA94J4MQmj/view?usp=sharing" target="_blank">View Project</a></span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="project-column">
+                <div class="project-box">
+                    <h3>Voice To Text System</h3>
+                    <div class="project-link">
+                        <span><a href="https://drive.google.com/file/d/1rgpe4TQw_Tk8y_0XFdUaYtkA94J4MQmj/view?usp=sharing" target="_blank">View Project</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="/" method="POST">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" name="fmail" placeholder="your email" class="form-control" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="fpwd" placeholder="your password" class="form-control" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="tmail" placeholder="To email" class="form-control" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="subject" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+            <div class="textarea-field">
+                <textarea name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
+                <span class="focus"></span>
+            </div>
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by developer | All Rights Reserved</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
