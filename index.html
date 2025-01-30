@@ -433,92 +433,60 @@
         margin: 0;
     }
     
-    .contact{
-    min-height: auto;
-    padding-bottom: 7rem;
-    
-    }
-    
-    .contact form{
-    
-        max-width: 70rem;
-        margin: 0 auto;
+    .contact {
+        padding: 80px 20px; /* Increased padding for better spacing */
+        background-color: var(--bg-color); /* Dark background for contrast */
         text-align: center;
     }
     
-    .contact form .input-box{
-    
-        position: relative;
+    .contact .heading {
+        font-size: 3rem; /* Increased heading size */
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+    }
+    .contain {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
     
-    .contact form .focus{
-    
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background:var(--second-bg-color);
-        border-radius: .6rem;
-        z-index: -1;
-        transition: .5s;
-    }
-    .contact form .input-box .input-field input:focus~.focus,
-    .contact form .input-box .input-field input:valid~.focus,
-    .contact  form .textarea-field textarea:focus~.focus,
-    .contact  form .textarea-field textarea:valid~.focus{
-    
+    .bor {
+        background: var(--second-bg-color); /* Semi-transparent background */
+        padding: 30px; /* Increased padding for better spacing */
+        border-radius: 15px; /* Slightly larger border radius */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
         width: 100%;
+        max-width: 600px; /* Increased width */
     }
     
-    
-    
-    
-    .contact form .input-box .input-field{
-    
-        position: relative;
-        width: 49%;
-        margin: .8rem 0;
-    }
-    
-    .contact form .input-box .input-field input,
-    .contact form .textarea-field textarea {
-        width: 100%;
-        height: 100%;
-        padding: 1.5rem;
-        font-size:1.6rem;
-        color: var(--text-color);
-        background: transparent;
-        border-radius: .6rem;
-        border: .2rem solid var(--main-color);
-    }
-    
-    .contact form .input-box .input-field input::placeholder,
-    .contact form .textarea-field textarea::placeholder{
-        color: var(--text-color);
-    }
-    
-    .contact form .textarea-field{
-        position: relative;
-        margin: .8rem 0 2.7rem;
+    .contact-info p {
+        font-size: 1.4rem; /* Bigger text */
+        margin: 20px 0; /* More spacing between lines */
+        color: #f8f9fa; /* Light text for readability */
+        font-family: 'Poppins', sans-serif;
         display: flex;
+        align-items: center;
+        gap: 15px; /* Increased gap between icon and text */
     }
     
-    .contact form .textarea-field textarea{
-    
-        resize: none;
+    .contact-info i {
+        font-size: 2rem; /* Bigger icons */
+        color: var(--main-color); /* Accent color */
     }
     
-    .contact form .btn-box.btns .btn{
-        cursor: pointer;
+    .contact-info a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600; /* Slightly bolder links */
+        font-size: 1.3rem; /* Bigger clickable links */
+        transition: color 0.3s ease-in-out;
     }
     
-    .contact form .btn{
-        height: 5rem;
+    .contact-info a:hover {
+        color: var(--main-color);
     }
+    
     
     .footer-text p{
      font-size: 1.6rem;
@@ -607,6 +575,34 @@
             max-width: 100%;
         }
     }
+
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 10%;
+    }
+    
+  
+    
+    .home-image {
+        max-width: 400px;
+        animation: float 3s ease-in-out infinite; /* Smooth floating effect */
+        
+    }
+    
+    .home-image img {
+        width: 100%;
+        max-width: 350px; /* Adjust size */
+        border-radius: 180px;
+    }
+    
+    /* Floating Animation */
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    
     
 </style>
 <body>
@@ -636,6 +632,9 @@
                 <a href="#about" class="btn">About Me</a>
                 
             </div>
+        </div>
+        <div class="home-image">
+            <img src="proimg.png" alt="Developer Illustration">
         </div>
     </section>
 
@@ -702,30 +701,28 @@
             </div>
         </div>
     </section>
-
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-row">
             <div class="skills-column">
                 <h3 class="title">Frontend</h3>
-    
                 <div class="skills-box">
                     <div class="skills-content">
                         <div class="skills-list">
                             <div class="skill-item">
-    
+                                <i class='bx bxl-html5' style="font-size: 60px; color: orange;"></i>
                                 <p>HTML</p>
                             </div>
                             <div class="skill-item">
-                                <i class='bx bxl-html5'></i>
+                                <i class='bx bxl-css3' style="font-size: 60px; color: blue;"></i>
                                 <p>CSS</p>
                             </div>
                             <div class="skill-item">
-                                <i class='bx bxl-javascript' ></i>
+                                <i class='bx bxl-javascript' style="font-size: 60px; color: yellow;"></i>
                                 <p>JavaScript</p>
                             </div>
                             <div class="skill-item">
-                                <i class='bx bxl-react' style="width: 60px; height: 60px;  color: red;"></i>
+                                <i class='bx bxl-react' style="font-size: 60px; color: cyan;"></i>
                                 <p>ReactJS</p>
                             </div>
                         </div>
@@ -735,24 +732,23 @@
     
             <div class="skills-column">
                 <h3 class="title">Backend</h3>
-    
                 <div class="skills-box">
                     <div class="skills-content">
                         <div class="skills-list">
                             <div class="skill-item">
-                                <i class='bx bxl-python'></i>
+                                <i class='bx bxl-python' style="font-size: 60px; color: green;"></i>
                                 <p>Python</p>
                             </div>
                             <div class="skill-item">
-                                <i class='bx bxs-data'></i>
+                                <i class='bx bxs-data' style="font-size: 60px; color: grey;"></i>
                                 <p>SQL</p>
                             </div>
                             <div class="skill-item">
-                                <i class='bx bxl-django' ></i>
+                                <i class='bx bxl-django' style="font-size: 60px; color: darkgreen;"></i>
                                 <p>Django</p>
                             </div>
                             <div class="skill-item">
-                                <i class='bx bxl-flask' ></i>
+                                <i class='bx bxl-flask' style="font-size: 60px; color: black;"></i>
                                 <p>Flask</p>
                             </div>
                         </div>
@@ -760,8 +756,7 @@
                 </div>
             </div>
         </div>
-    </section>
-    
+    </section> 
     <section class="project" id="project">
         <h2 class="heading">  <span>Projects</span></h2>
         <div class="project-row">
@@ -787,37 +782,30 @@
     
 
 
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="/" method="POST">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" name="fmail" placeholder="your email" class="form-control" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="password" name="fpwd" placeholder="your password" class="form-control" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" name="tmail" placeholder="To email" class="form-control" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" name="subject" placeholder="Email Subject" required>
-                    <span class="focus"></span>
-                </div>
-            </div>
-            <div class="textarea-field">
-                <textarea name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
-                <span class="focus"></span>
-            </div>
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
-            </div>
-        </form>
-    </section>
     
+<section class="contact" id="contact">
+    <h2 class="heading" style="color: azure;">Contact <span>Me!</span></h2>
+    <div class="contain">
+    <div class="bor">
+    <div class="contact-info">
+  
+        <p>
+          <i class='bx bxl-gmail' ></i>
+            Email:<a href="#">sivasankarinv03@gmail.com</a>
+        </p>
+        <p>
+          <i class='bx bxs-phone' ></i>
+            Phone: <a href="#">+91 9597228864</a>
+        </p>
+        <p>
+          <i class='bx bxs-map'></i>
+            Loction: <a href="#">Kovilpatti</a>
+        </p>
+    </div>
+  </div>
+  </div>
+  </section>
+
     <footer class="footer">
         <div class="footer-text">
             <p>Copyright &copy; 2024 by developer | All Rights Reserved</p>
